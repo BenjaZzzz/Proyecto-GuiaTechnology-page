@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { site, waLink } from "@/lib/site";
+import { site } from "@/lib/site";
 import LogoMark from "./LogoMark";
 import { categories } from "@/data/categories";
 import { locations } from "@/data/locations";
 import Icon from "./Icon";
+import WhatsAppButton from "./WhatsAppButton";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -37,14 +38,9 @@ export default function Footer() {
               >
                 <Icon name="facebook" size={18} />
               </a>
-              <a
-                href={waLink()}
-                aria-label="WhatsApp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <WhatsAppButton className="" ariaLabel="WhatsApp">
                 <Icon name="whatsapp" size={18} />
-              </a>
+              </WhatsAppButton>
             </div>
           </div>
 

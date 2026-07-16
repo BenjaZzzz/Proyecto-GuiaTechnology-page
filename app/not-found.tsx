@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { waLink } from "@/lib/site";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function NotFound() {
   return (
@@ -28,15 +28,7 @@ export default function NotFound() {
           Volver al inicio
           <Icon name="arrowRight" size={18} />
         </Link>
-        <a
-          className="btn btn-wa"
-          href={waLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="whatsapp" size={18} />
-          Escríbenos
-        </a>
+        <WhatsAppButton className="btn btn-wa" label="Escríbenos" />
       </div>
     </section>
   );

@@ -18,6 +18,12 @@ Sitio web de ecommerce para **Guiatechnology**, empresa dominicana de venta de l
 |----------|----------|
 | ![Nosotros](docs/screenshots/nosotros.png) | ![Contacto](docs/screenshots/contacto.png) |
 
+### Selector de sucursal por WhatsApp
+
+Al presionar cualquier botón de WhatsApp, el usuario elige con qué sucursal desea comunicarse antes de abrir el chat.
+
+![Selector de sucursal](docs/screenshots/whatsapp-modal.png)
+
 ---
 
 ## Stack

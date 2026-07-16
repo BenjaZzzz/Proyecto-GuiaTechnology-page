@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { site, waLink } from "@/lib/site";
+import { site } from "@/lib/site";
 import Icon from "./Icon";
 import LogoMark from "./LogoMark";
+import WhatsAppButton from "./WhatsAppButton";
 import styles from "./NavIsland.module.css";
 
 export default function NavIsland() {
@@ -54,15 +55,10 @@ export default function NavIsland() {
         </div>
 
         <div className={styles.actions}>
-          <a
-            className={styles.wa}
-            href={waLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <WhatsAppButton className={styles.wa} ariaLabel="WhatsApp">
             <Icon name="whatsapp" size={18} />
             <span className={styles.waLabel}>WhatsApp</span>
-          </a>
+          </WhatsAppButton>
           <button
             className={styles.toggle}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
@@ -93,15 +89,11 @@ export default function NavIsland() {
             </Link>
           ))}
         </div>
-        <a
+        <WhatsAppButton
           className="btn btn-wa full"
-          href={waLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="whatsapp" size={18} />
-          Escríbenos por WhatsApp
-        </a>
+          label="Escríbenos por WhatsApp"
+          onOpen={() => setOpen(false)}
+        />
       </aside>
     </>
   );

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Icon, { type IconName } from "@/components/Icon";
-import { site, waLink } from "@/lib/site";
+import { site } from "@/lib/site";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { locations } from "@/data/locations";
 import styles from "./nosotros.module.css";
 
@@ -122,15 +123,7 @@ export default function NosotrosPage() {
               Ver ubicaciones
               <Icon name="arrowRight" size={18} />
             </Link>
-            <a
-              className="btn btn-wa"
-              href={waLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon name="whatsapp" size={18} />
-              Escríbenos
-            </a>
+            <WhatsAppButton className="btn btn-wa" label="Escríbenos" />
           </div>
         </div>
       </section>

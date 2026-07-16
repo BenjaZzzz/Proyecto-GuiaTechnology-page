@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { type Product, formatRD, specIcon } from "@/data/products";
-import { waLink } from "@/lib/site";
 import Icon from "./Icon";
+import WhatsAppButton from "./WhatsAppButton";
 import styles from "./ProductCard.module.css";
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -60,17 +60,12 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className={styles.actions}>
-          <a
+          <WhatsAppButton
             className="btn btn-wa btn-sm full"
-            href={waLink(
-              `Hola, me interesa la ${product.name}. ¿Está disponible?`
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="whatsapp" size={16} />
-            Pedir por WhatsApp
-          </a>
+            iconSize={16}
+            label="Pedir por WhatsApp"
+            message={`Hola, me interesa la ${product.name}. ¿Está disponible?`}
+          />
           <Link
             className="btn btn-ghost btn-sm"
             href={`/producto/${product.slug}`}

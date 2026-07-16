@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { type Product, formatRD, specIcon } from "@/data/products";
-import { site, waLink } from "@/lib/site";
+import { site } from "@/lib/site";
 import Icon from "./Icon";
+import WhatsAppButton from "./WhatsAppButton";
 import styles from "./HeroCarousel.module.css";
 
 const DURATION = 5500; // ms per slide
@@ -99,19 +100,13 @@ export default function HeroCarousel({ items }: { items: Product[] }) {
                 </div>
 
                 <div className={styles.ctas}>
-                  <a
+                  <WhatsAppButton
                     className="btn btn-wa btn-lg"
-                    href={waLink(
-                      `Hola, me interesa la ${p.name} (${formatRD(
-                        p.price
-                      )}). ¿Está disponible?`
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon name="whatsapp" size={18} />
-                    Pedir por WhatsApp
-                  </a>
+                    label="Pedir por WhatsApp"
+                    message={`Hola, me interesa la ${p.name} (${formatRD(
+                      p.price
+                    )}). ¿Está disponible?`}
+                  />
                   <Link
                     href={`/producto/${p.slug}`}
                     className={`btn btn-ghost btn-lg ${styles.ctaGhost}`}

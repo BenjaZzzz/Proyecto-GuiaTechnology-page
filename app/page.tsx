@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { site, waLink } from "@/lib/site";
+import { site } from "@/lib/site";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { products } from "@/data/products";
 import { categories } from "@/data/categories";
 import { testimonials } from "@/data/testimonials";
@@ -224,15 +225,10 @@ export default function HomePage() {
             te pasamos el precio final y te lo apartamos hoy.
           </p>
           <div className={styles.ctaButtons}>
-            <a
+            <WhatsAppButton
               className="btn btn-wa btn-lg"
-              href={waLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon name="whatsapp" size={18} />
-              Pedir por WhatsApp
-            </a>
+              label="Pedir por WhatsApp"
+            />
             <Link href="/tienda" className={`btn btn-lg ${styles.ctaGhost}`}>
               Explorar catálogo
               <Icon name="arrowRight" size={18} />

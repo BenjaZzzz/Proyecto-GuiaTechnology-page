@@ -2,10 +2,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { products, getProduct, formatRD, specIcon } from "@/data/products";
-import { site, waLink } from "@/lib/site";
+import { site } from "@/lib/site";
 import Icon, { type IconName } from "@/components/Icon";
 import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import styles from "./product.module.css";
 
 export function generateStaticParams() {
@@ -96,19 +97,13 @@ export default async function ProductPage({
             </div>
 
             <div className={styles.cta}>
-              <a
+              <WhatsAppButton
                 className="btn btn-wa btn-lg full"
-                href={waLink(
-                  `Hola, me interesa la ${product.name} (${formatRD(
-                    product.price
-                  )}). ¿Sigue disponible?`
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon name="whatsapp" size={18} />
-                Pedir por WhatsApp
-              </a>
+                label="Pedir por WhatsApp"
+                message={`Hola, me interesa la ${product.name} (${formatRD(
+                  product.price
+                )}). ¿Sigue disponible?`}
+              />
               <a className="btn btn-ghost btn-lg" href={`tel:${site.whatsapp}`}>
                 <Icon name="phone" size={18} />
                 Llamar

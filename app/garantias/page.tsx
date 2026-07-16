@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Icon, { type IconName } from "@/components/Icon";
-import { waLink } from "@/lib/site";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import styles from "./garantias.module.css";
 
 export const metadata: Metadata = {
@@ -201,15 +201,11 @@ export default function GarantiasPage() {
               Escríbenos con tu número de factura y te ayudamos enseguida.
             </p>
           </div>
-          <a
+          <WhatsAppButton
             className="btn btn-wa btn-lg"
-            href={waLink("Hola, tengo una consulta sobre la garantía de mi equipo.")}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="whatsapp" size={18} />
-            Contactar soporte
-          </a>
+            label="Contactar soporte"
+            message="Hola, tengo una consulta sobre la garantía de mi equipo."
+          />
         </div>
       </section>
     </>
