@@ -1,0 +1,30 @@
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.icon {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.wDark {
+  color: #2d2d2d;
+}
+
+.wBlue {
+  color: #029efe;
+}

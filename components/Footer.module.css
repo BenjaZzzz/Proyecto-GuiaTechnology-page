@@ -1,0 +1,121 @@
+.footer {
+  margin-top: 4rem;
+  padding-block: 3.5rem 1.5rem;
+  background:
+    linear-gradient(180deg, transparent, var(--surface-2)),
+    var(--surface-1);
+  border-top: 1px solid var(--border);
+}
+.top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 560px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 340px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.brand:hover {
+  opacity: 0.8;
+}
+.social {
+  display: flex;
+  gap: 0.5rem;
+}
+.social a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--surface-0);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  transition: all 0.2s var(--ease);
+}
+.social a:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.colTitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.col a {
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.col a:hover {
+  color: var(--brand);
+}
+.locations li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.locName {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.locName svg {
+  color: var(--brand);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+.rating svg {
+  color: #f5a623;
+  fill: #f5a623;
+}

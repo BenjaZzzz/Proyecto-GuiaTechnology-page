@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  overflow: clip;
+  padding-top: calc(var(--nav-h) + 2.5rem);
+  padding-bottom: 2rem;
+}
+.glow {
+  position: absolute;
+  top: -30%;
+  right: 4%;
+  width: 40vw;
+  max-width: 480px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(2, 158, 254, 0.18), transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  margin-bottom: 0.5rem;
+}
+.crumbs a {
+  color: var(--ink-soft);
+}
+.crumbs a:hover {
+  color: var(--brand);
+}
+.crumbs svg {
+  color: var(--ink-faint);
+}
+.sub {
+  max-width: 60ch;
+}
